@@ -81,13 +81,30 @@
                 apiBody.innerHTML = `${joke}` ;
             })
             .catch((err)=>{
+                apiBody.innerHTML = `api is not working` ;
                 console.log(err);
             })
         }
 
 
 
+
+
+        // const fetchJokes = async ()=>{
+        //     try{
+        //         const response = await fetch(apiUrl);
+        //         const data = await response.json();
+        //         apiBody.innerHTML = data.setup ;
+        //     }catch (error){
+        //         apiBody.innerHTML = `api is not working` ;
+        //         console.log(error)
+        //     }
+        // }
+
+
+
         document.getElementById("jokes-btn").addEventListener("click", fetchJokes);
+    
         fetchJokes();
     </script>
 </body>
